@@ -1,26 +1,24 @@
-@*
- * This template takes a single argument, a String containing a
- * message to display.
- *@
-@(message: String, list: Array[Int])
+@(allArticles: List[Article])
 
-@*
- * Call the `main` template with two arguments. The first
- * argument is a `String` with the title of the page, the second
- * argument is an `Html` object containing the body of the page.
- *@
-@main("Welcome to Play") {
+<h1>
+    Welcome
+</h1>
 
-    @*
-     * Get an `Html` object by calling the built-in Play welcome
-     * template and passing a `String` message.
-     *@
-    @* @play20.welcome(message, style = "Java") *@
+<a href="@routes.HomeController.getEggs(2)">2km Eggs</a> </br>
+<a href="@routes.HomeController.getEggs(5)">5km Eggs</a> </br>
+<a href="@routes.HomeController.getEggs(10)">10km Eggs</a> </br>
 
-    message
-    <ul>
-    @for(x <- list) {
-        <li>@x</li>
+<ul>
+    @if(allArticles != null) {
+        @for(x <- allArticles) {
+            <li>@x.title</li>
+            <li>@x.content</li>
+        }
     }
-    </ul>
-}
+</ul>
+
+<!--<form action="@routes.HomeController.add()" method="post">-->
+    <!--<input type="text" name="title">-->
+    <!--<input type="text" name="content">-->
+    <!--<button>Add</button>-->
+<!--</form>-->

@@ -1,31 +1,48 @@
 package controllers;
 
+import com.avaje.ebean.Ebean;
+import com.avaje.ebean.Transaction;
 import play.mvc.*;
+import play.data.*;
+import static play.data.Form.*;
 
-import views.html.*;
+import models.*;
 
-import java.util.ArrayList;
+import javax.inject.Inject;
+import javax.persistence.PersistenceException;
 import java.util.List;
 
 /**
- * This controller contains an action to handle HTTP requests
- * to the application's home page.
+ * Manage a database of computers
  */
-public class HomeController extends Controller {
+public class HomeController  extends Controller {
 
+    private FormFactory formFactory;
+
+    @Inject
+    public HomeController(FormFactory formFactory) {
+        this.formFactory = formFactory;
+    }
+    
     /**
-     * An action that renders an HTML page with a welcome message.
-     * The configuration in the <code>routes</code> file means that
-     * this method will be called when the application receives a
-     * <code>GET</code> request with a path of <code>/</code>.
+     * Handle default path requests, redirect to computers list
      */
-    public Result index() {
-        //ArrayList<Integer> arrayList = new ArrayList<>(10);
-        int[] arrayList = new int[10];
-        for (int i = 0; i < 10; i++)
-            //arrayList.add(i);
-            arrayList[i] = i;
-        return ok(index.render("String", arrayList));
+    public Result index()
+    {
+        //return GO_HOME;
+        return ok(views.html.index.render(Article.allArticles()));
     }
 
+    public Result add() {
+        Form<Article> articleForm = formFactory.form(Article.class).bindFromRequest();
+        Article article = articleForm.get();
+        article.save();
+        //return ok(views.html.add.render(article));
+        return redirect(routes.HomeController.index());
+    }
+
+    public Result getEggs(int km) {
+        return ok(views.html.eggs.render(km, Egg.allEggs(km)));
+    }
 }
+            

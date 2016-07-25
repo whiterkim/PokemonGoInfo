@@ -1,0 +1,80 @@
+# --- Sample dataset
+
+# --- !Ups
+insert into egg (id, name, distance) values (1, 'Bulbasaur', 2);
+insert into egg (id, name, distance) values (4, 'Charmander', 2);
+insert into egg (id, name, distance) values (7, 'Squirtle', 2);
+insert into egg (id, name, distance) values (10, 'Caterpie', 2);
+insert into egg (id, name, distance) values (13, 'Weedle', 2);
+insert into egg (id, name, distance) values (16, 'Pidgey', 2);
+insert into egg (id, name, distance) values (19, 'Rattata', 2);
+insert into egg (id, name, distance) values (21, 'Pearow', 2);
+insert into egg (id, name, distance) values (25, 'Pikachu', 2);
+insert into egg (id, name, distance) values (35, 'Clefairy', 2);
+insert into egg (id, name, distance) values (39, 'Jigglypuff', 2);
+insert into egg (id, name, distance) values (41, 'Zubat', 2);
+insert into egg (id, name, distance) values (74, 'Geodude', 2);
+insert into egg (id, name, distance) values (129, 'Magikarp', 2);
+insert into egg (id, name, distance) values (23 , 'Ekans', 5);
+insert into egg (id, name, distance) values (27 , 'Sandshrew', 5);
+insert into egg (id, name, distance) values (29 , 'Nidoran♀', 5);
+insert into egg (id, name, distance) values (32 , 'Nidoran♂', 5);
+insert into egg (id, name, distance) values (37 , 'Vulpix', 5);
+insert into egg (id, name, distance) values (43 , 'Oddish', 5);
+insert into egg (id, name, distance) values (46 , 'Paras', 5);
+insert into egg (id, name, distance) values (48 , 'Venonat', 5);
+insert into egg (id, name, distance) values (50 , 'Diglett', 5);
+insert into egg (id, name, distance) values (52 , 'Meowth', 5);
+insert into egg (id, name, distance) values (54 , 'Psyduck', 5);
+insert into egg (id, name, distance) values (56 , 'Mankey', 5);
+insert into egg (id, name, distance) values (58 , 'Growlithe', 5);
+insert into egg (id, name, distance) values (60 , 'Poliwag', 5);
+insert into egg (id, name, distance) values (63 , 'Abra', 5);
+insert into egg (id, name, distance) values (66 , 'Machop', 5);
+insert into egg (id, name, distance) values (69 , 'Bellsprout', 5);
+insert into egg (id, name, distance) values (72 , 'Tentacool', 5);
+insert into egg (id, name, distance) values (77 , 'Ponyta', 5);
+insert into egg (id, name, distance) values (79 , 'Slowpoke', 5);
+insert into egg (id, name, distance) values (81 , 'Magnemite', 5);
+insert into egg (id, name, distance) values (83 , 'Farfetch''d', 5);
+insert into egg (id, name, distance) values (84 , 'Doduo', 5);
+insert into egg (id, name, distance) values (86 , 'Seel', 5);
+insert into egg (id, name, distance) values (88 , 'Grimer', 5);
+insert into egg (id, name, distance) values (90 , 'Shellder', 5);
+insert into egg (id, name, distance) values (92 , 'Gastly', 5);
+insert into egg (id, name, distance) values (96 , 'Drowzee', 5);
+insert into egg (id, name, distance) values (98 , 'Krabby', 5);
+insert into egg (id, name, distance) values (100, 'Voltorb', 5);
+insert into egg (id, name, distance) values (102, 'Exeggcute', 5);
+insert into egg (id, name, distance) values (104, 'Cubone', 5);
+insert into egg (id, name, distance) values (108, 'Lickitung', 5);
+insert into egg (id, name, distance) values (109, 'Koffing', 5);
+insert into egg (id, name, distance) values (111, 'Rhyhorn', 5);
+insert into egg (id, name, distance) values (114, 'Tangela', 5);
+insert into egg (id, name, distance) values (115, 'Kangaskhan', 5);
+insert into egg (id, name, distance) values (116, 'Horsea', 5);
+insert into egg (id, name, distance) values (118, 'Goldeen', 5);
+insert into egg (id, name, distance) values (120, 'Staryu', 5);
+insert into egg (id, name, distance) values (128, 'Tauros', 5);
+insert into egg (id, name, distance) values (137, 'Porygon', 5);
+insert into egg (id, name, distance) values (95 , 'Onix', 10);
+insert into egg (id, name, distance) values (106, 'Hitmonlee', 10);
+insert into egg (id, name, distance) values (107, 'Hitmonchan', 10);
+insert into egg (id, name, distance) values (113, 'Chansey', 10);
+insert into egg (id, name, distance) values (122, 'Mr. Mime', 10);
+insert into egg (id, name, distance) values (123, 'Scyther', 10);
+insert into egg (id, name, distance) values (124, 'Jynx', 10);
+insert into egg (id, name, distance) values (125, 'Electabuzz', 10);
+insert into egg (id, name, distance) values (126, 'Magmar', 10);
+insert into egg (id, name, distance) values (127, 'Pinsir', 10);
+insert into egg (id, name, distance) values (131, 'Lapras', 10);
+insert into egg (id, name, distance) values (133, 'Eevee', 10);
+insert into egg (id, name, distance) values (138, 'Omanyte', 10);
+insert into egg (id, name, distance) values (140, 'Kabuto', 10);
+insert into egg (id, name, distance) values (142, 'Aerodactyl', 10);
+insert into egg (id, name, distance) values (143, 'Snorlax', 10);
+insert into egg (id, name, distance) values (147, 'Dratini', 10);
+
+# --- !Downs
+
+

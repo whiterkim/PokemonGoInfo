@@ -1,0 +1,13 @@
+@(km: Int, allEggs: List[Egg])
+
+<h1>Eggs</h1>
+
+<h2>@km</h2>
+
+<ul>
+    @if(allEggs != null) {
+        @for(x <- allEggs) {
+        <li>@x.id  @x.name</li>
+        }
+    }
+</ul>

@@ -1,13 +1,111 @@
 @(list: List[Pokemon])
-<h1>Evolve Candy</h1>
-<a href="@routes.HomeController.evolveCandy(12)">12</a>
-<a href="@routes.HomeController.evolveCandy(25)">25</a>
-<a href="@routes.HomeController.evolveCandy(50)">50</a>
-<a href="@routes.HomeController.evolveCandy(100)">100</a>
-<a href="@routes.HomeController.evolveCandy(400)">400</a>
-<a href="@routes.HomeController.evolveCandy(-1)">Cannot evolve</a>
-<ul>
-    @for(x <- list) {
-    <li>@x.id  @x.name @x.evolve_candy</li>
-    }
-</ul>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://v4-alpha.getbootstrap.com/favicon.ico">
+
+    <title>Pokemon GO</title>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.at("css/bootstrap.min.css")">
+    <link rel="stylesheet" media="screen" href="@routes.Assets.at("css/dashboard.css")"/>
+</head>
+
+
+
+<body>
+
+<nav class="navbar navbar-dark navbar-fixed-top bg-inverse">
+
+    <a class="navbar-brand" href="@routes.HomeController.index()">Home</a>
+
+
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-sidebar">
+                <li><a href="@routes.HomeController.pokemonList("All")">Pokemon List</a></li>
+                <li><a href="@routes.HomeController.evolveCandy(0)">Evolution Candy Required</a></li>
+            </ul>
+            <ul class="nav nav-sidebar">
+                <li><a href="@routes.HomeController.moveList(0)">Move List</a></li>
+                <li><a href="@routes.HomeController.moveList(1)">Fast Moves</a></li>
+                <li><a href="@routes.HomeController.moveList(2)">Special Moves</a></li>
+            </ul>
+            <ul class="nav nav-sidebar">
+                <li><a href="@routes.HomeController.getEggs(2)">2km Eggs</a></li>
+                <li><a href="@routes.HomeController.getEggs(5)">5km Eggs</a></li>
+                <li><a href="@routes.HomeController.getEggs(10)">10km Eggs</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <h1 class="page-header">Pokemon List</h1>
+
+            Candy needed:
+            <a href="@routes.HomeController.evolveCandy(12)">12</a>
+            <a href="@routes.HomeController.evolveCandy(25)">25</a>
+            <a href="@routes.HomeController.evolveCandy(50)">50</a>
+            <a href="@routes.HomeController.evolveCandy(100)">100</a>
+            <a href="@routes.HomeController.evolveCandy(400)">400</a>
+            <!--<a href="@routes.HomeController.evolveCandy(-1)">Cannot evolve</a>-->
+            </br></br>
+
+            <!--<h2>Pokemon List</h2>-->
+            <div class="table-responsive">
+                <table class="table table-striped">
+
+                    @if(list.isEmpty) {
+                    <tr>
+                        <th>Not Found</th>
+                    </tr>
+                    } else {
+                    <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Name</th>
+                        <th>Candy</th>
+                    </tr>
+                    <tbody>
+                    @for(x <- list) {
+                    <tr>
+                        <th>@x.id</th>
+                        <th>@x.name</th>
+                        <th>@if(x.evolve_candy == -1) {
+                                -
+                            } else {
+                                @x.type2
+                            }
+                        </th>
+                    </tr>
+                    }
+                    </tbody>
+                    }
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./Dashboard Template for Bootstrap_files/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="./Dashboard Template for Bootstrap_files/bootstrap.min.js"></script>
+<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+<script src="./Dashboard Template for Bootstrap_files/holder.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="./Dashboard Template for Bootstrap_files/ie10-viewport-bug-workaround.js"></script>
+
+
+</body></html>

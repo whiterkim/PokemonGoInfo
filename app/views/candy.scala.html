@@ -1,0 +1,13 @@
+@(list: List[Pokemon])
+<h1>Evolve Candy</h1>
+<a href="@routes.HomeController.evolveCandy(12)">12</a>
+<a href="@routes.HomeController.evolveCandy(25)">25</a>
+<a href="@routes.HomeController.evolveCandy(50)">50</a>
+<a href="@routes.HomeController.evolveCandy(100)">100</a>
+<a href="@routes.HomeController.evolveCandy(400)">400</a>
+<a href="@routes.HomeController.evolveCandy(-1)">Cannot evolve</a>
+<ul>
+    @for(x <- list) {
+    <li>@x.id  @x.name @x.evolve_candy</li>
+    }
+</ul>

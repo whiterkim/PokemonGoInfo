@@ -7,6 +7,9 @@ GET     /                           controllers.HomeController.index()
 
 POST    /add                        controllers.HomeController.add()
 
+GET     /pokemon                    controllers.HomeController.pokemonList(type:String)
+GET     /candy                      controllers.HomeController.evolveCandy(num:Int)
+GET     /moves                      controllers.HomeController.moveList(type:Int)
 GET     /eggs                       controllers.HomeController.getEggs(km:Int)
 
 # Map static resources from the /public folder to the /assets URL path

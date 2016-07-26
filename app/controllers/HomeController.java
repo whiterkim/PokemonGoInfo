@@ -41,8 +41,19 @@ public class HomeController  extends Controller {
         return redirect(routes.HomeController.index());
     }
 
+    public Result pokemonList(String type) {
+        return ok(views.html.pokemon.render(Pokemon.allPokemon(type), Pokemon.typeList()));
+    }
+
+    public Result evolveCandy(int num) {
+        return ok(views.html.candy.render(Pokemon.needsCandy(num)));
+    }
+
+    public Result moveList(int type) {
+        return ok(views.html.moves.render());
+    }
     public Result getEggs(int km) {
-        return ok(views.html.eggs.render(km, Egg.allEggs(km)));
+        return ok(views.html.eggs.render(km, Pokemon.allEggs(km)));
     }
 }
             

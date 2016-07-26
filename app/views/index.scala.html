@@ -46,7 +46,7 @@
         <!--<span class="icon-bar"></span>-->
         <!--<span class="icon-bar"></span>-->
     <!--</button>-->
-    <a class="navbar-brand" href="http://v4-alpha.getbootstrap.com/examples/dashboard/#">Home</a>
+    <a class="navbar-brand" href="@routes.HomeController.index()">Home</a>
 
     <!--<div id="navbar">-->
         <!--<nav class="nav navbar-nav pull-xs-left">-->
@@ -64,17 +64,17 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
+            <!--<ul class="nav nav-sidebar">-->
+                <!--<li class="active"><a href="http://v4-alpha.getbootstrap.com/examples/dashboard/#">Overview <span class="sr-only">(current)</span></a></li>-->
+            <!--</ul>-->
             <ul class="nav nav-sidebar">
-                <li class="active"><a href="http://v4-alpha.getbootstrap.com/examples/dashboard/#">Overview <span class="sr-only">(current)</span></a></li>
+                <li><a href="@routes.HomeController.pokemonList("All")">Pokemon List</a></li>
+                <li><a href="@routes.HomeController.evolveCandy(0)">Evolution Candy Required</a></li>
             </ul>
             <ul class="nav nav-sidebar">
-                <li><a href="http://v4-alpha.getbootstrap.com/examples/dashboard/">Pokemon List</a></li>
-                <li><a href="http://v4-alpha.getbootstrap.com/examples/dashboard/">Evolution Candy Required</a></li>
-            </ul>
-            <ul class="nav nav-sidebar">
-                <li><a href="http://v4-alpha.getbootstrap.com/examples/dashboard/">Move List</a></li>
-                <li><a href="http://v4-alpha.getbootstrap.com/examples/dashboard/">Fast Moves</a></li>
-                <li><a href="http://v4-alpha.getbootstrap.com/examples/dashboard/">Special Moves</a></li>
+                <li><a href="@routes.HomeController.moveList(0)">Move List</a></li>
+                <li><a href="@routes.HomeController.moveList(1)">Fast Moves</a></li>
+                <li><a href="@routes.HomeController.moveList(2)">Special Moves</a></li>
             </ul>
             <ul class="nav nav-sidebar">
                 <li><a href="@routes.HomeController.getEggs(2)">2km Eggs</a></li>
@@ -83,7 +83,7 @@
             </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-            <h1 class="page-header">Pokemon GO</h1>
+            <h1 class="page-header">Introduction</h1>
 
             <!--<div class="row placeholders">-->
                 <!--<div class="col-xs-6 col-sm-3 placeholder">-->
@@ -108,134 +108,144 @@
                 <!--</div>-->
             <!--</div>-->
 
-            <h2>Pokemon List</h2>
-            <div class="table-responsive">
-                <table class="table table-striped">
-                    <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Header</th>
-                        <th>Header</th>
-                        <th>Header</th>
-                        <th>Header</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>1,001</td>
-                        <td>Lorem</td>
-                        <td>ipsum</td>
-                        <td>dolor</td>
-                        <td>sit</td>
-                    </tr>
-                    <tr>
-                        <td>1,002</td>
-                        <td>amet</td>
-                        <td>consectetur</td>
-                        <td>adipiscing</td>
-                        <td>elit</td>
-                    </tr>
-                    <tr>
-                        <td>1,003</td>
-                        <td>Integer</td>
-                        <td>nec</td>
-                        <td>odio</td>
-                        <td>Praesent</td>
-                    </tr>
-                    <tr>
-                        <td>1,003</td>
-                        <td>libero</td>
-                        <td>Sed</td>
-                        <td>cursus</td>
-                        <td>ante</td>
-                    </tr>
-                    <tr>
-                        <td>1,004</td>
-                        <td>dapibus</td>
-                        <td>diam</td>
-                        <td>Sed</td>
-                        <td>nisi</td>
-                    </tr>
-                    <tr>
-                        <td>1,005</td>
-                        <td>Nulla</td>
-                        <td>quis</td>
-                        <td>sem</td>
-                        <td>at</td>
-                    </tr>
-                    <tr>
-                        <td>1,006</td>
-                        <td>nibh</td>
-                        <td>elementum</td>
-                        <td>imperdiet</td>
-                        <td>Duis</td>
-                    </tr>
-                    <tr>
-                        <td>1,007</td>
-                        <td>sagittis</td>
-                        <td>ipsum</td>
-                        <td>Praesent</td>
-                        <td>mauris</td>
-                    </tr>
-                    <tr>
-                        <td>1,008</td>
-                        <td>Fusce</td>
-                        <td>nec</td>
-                        <td>tellus</td>
-                        <td>sed</td>
-                    </tr>
-                    <tr>
-                        <td>1,009</td>
-                        <td>augue</td>
-                        <td>semper</td>
-                        <td>porta</td>
-                        <td>Mauris</td>
-                    </tr>
-                    <tr>
-                        <td>1,010</td>
-                        <td>massa</td>
-                        <td>Vestibulum</td>
-                        <td>lacinia</td>
-                        <td>arcu</td>
-                    </tr>
-                    <tr>
-                        <td>1,011</td>
-                        <td>eget</td>
-                        <td>nulla</td>
-                        <td>Class</td>
-                        <td>aptent</td>
-                    </tr>
-                    <tr>
-                        <td>1,012</td>
-                        <td>taciti</td>
-                        <td>sociosqu</td>
-                        <td>ad</td>
-                        <td>litora</td>
-                    </tr>
-                    <tr>
-                        <td>1,013</td>
-                        <td>torquent</td>
-                        <td>per</td>
-                        <td>conubia</td>
-                        <td>nostra</td>
-                    </tr>
-                    <tr>
-                        <td>1,014</td>
-                        <td>per</td>
-                        <td>inceptos</td>
-                        <td>himenaeos</td>
-                        <td>Curabitur</td>
-                    </tr>
-                    <tr>
-                        <td>1,015</td>
-                        <td>sodales</td>
-                        <td>ligula</td>
-                        <td>in</td>
-                        <td>libero</td>
-                    </tr>
-                    </tbody>
-                </table>
+            <!--<h2>Introduction</h2>-->
+
+            <b>Pokémon Go</b> (stylized <b>Pokémon GO</b>) is a location-based, augmented reality game for mobile devices developed by Niantic for iOS and Android operating systems. It was released in most regions of the world in July 2016. Typically played on mobile phones, players use the device's GPS and camera to capture, battle, and train virtual creatures, called Pokémon, who appear on the screen as if they were in the same real-world location as the player. The game is free-to-play, although in-app purchases are advertised for additional gameplay items.
+            </br>
+            Pokémon Go was released to mixed reviews. Reviewers praised the game and the incentive to be more active in the real world, while noting technical issues apparent at launch. It quickly became one of the most used mobile apps shortly after release and was downloaded by more than 40 million people worldwide. It has been credited with popularizing location-based and augmented reality gaming as well as for promoting physical activity. It also attracted controversy for contributing to car accidents and becoming a public nuisance at some locations, such as the U.S. Holocaust Museum in Washington, DC.
+            </br>
+            <div align="right">
+                --from <a href="https://en.wikipedia.org/wiki/Pok%C3%A9mon_Go">Wikipedia</a>
             </div>
+
+            <!--<h2>Pokemon List</h2>-->
+            <!--<div class="table-responsive">-->
+                <!--<table class="table table-striped">-->
+                    <!--<thead>-->
+                    <!--<tr>-->
+                        <!--<th>#</th>-->
+                        <!--<th>Header</th>-->
+                        <!--<th>Header</th>-->
+                        <!--<th>Header</th>-->
+                        <!--<th>Header</th>-->
+                    <!--</tr>-->
+                    <!--</thead>-->
+                    <!--<tbody>-->
+                    <!--<tr>-->
+                        <!--<td>1,001</td>-->
+                        <!--<td>Lorem</td>-->
+                        <!--<td>ipsum</td>-->
+                        <!--<td>dolor</td>-->
+                        <!--<td>sit</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>1,002</td>-->
+                        <!--<td>amet</td>-->
+                        <!--<td>consectetur</td>-->
+                        <!--<td>adipiscing</td>-->
+                        <!--<td>elit</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>1,003</td>-->
+                        <!--<td>Integer</td>-->
+                        <!--<td>nec</td>-->
+                        <!--<td>odio</td>-->
+                        <!--<td>Praesent</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>1,003</td>-->
+                        <!--<td>libero</td>-->
+                        <!--<td>Sed</td>-->
+                        <!--<td>cursus</td>-->
+                        <!--<td>ante</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>1,004</td>-->
+                        <!--<td>dapibus</td>-->
+                        <!--<td>diam</td>-->
+                        <!--<td>Sed</td>-->
+                        <!--<td>nisi</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>1,005</td>-->
+                        <!--<td>Nulla</td>-->
+                        <!--<td>quis</td>-->
+                        <!--<td>sem</td>-->
+                        <!--<td>at</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>1,006</td>-->
+                        <!--<td>nibh</td>-->
+                        <!--<td>elementum</td>-->
+                        <!--<td>imperdiet</td>-->
+                        <!--<td>Duis</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>1,007</td>-->
+                        <!--<td>sagittis</td>-->
+                        <!--<td>ipsum</td>-->
+                        <!--<td>Praesent</td>-->
+                        <!--<td>mauris</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>1,008</td>-->
+                        <!--<td>Fusce</td>-->
+                        <!--<td>nec</td>-->
+                        <!--<td>tellus</td>-->
+                        <!--<td>sed</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>1,009</td>-->
+                        <!--<td>augue</td>-->
+                        <!--<td>semper</td>-->
+                        <!--<td>porta</td>-->
+                        <!--<td>Mauris</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>1,010</td>-->
+                        <!--<td>massa</td>-->
+                        <!--<td>Vestibulum</td>-->
+                        <!--<td>lacinia</td>-->
+                        <!--<td>arcu</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>1,011</td>-->
+                        <!--<td>eget</td>-->
+                        <!--<td>nulla</td>-->
+                        <!--<td>Class</td>-->
+                        <!--<td>aptent</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>1,012</td>-->
+                        <!--<td>taciti</td>-->
+                        <!--<td>sociosqu</td>-->
+                        <!--<td>ad</td>-->
+                        <!--<td>litora</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>1,013</td>-->
+                        <!--<td>torquent</td>-->
+                        <!--<td>per</td>-->
+                        <!--<td>conubia</td>-->
+                        <!--<td>nostra</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>1,014</td>-->
+                        <!--<td>per</td>-->
+                        <!--<td>inceptos</td>-->
+                        <!--<td>himenaeos</td>-->
+                        <!--<td>Curabitur</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>1,015</td>-->
+                        <!--<td>sodales</td>-->
+                        <!--<td>ligula</td>-->
+                        <!--<td>in</td>-->
+                        <!--<td>libero</td>-->
+                    <!--</tr>-->
+                    <!--</tbody>-->
+                <!--</table>-->
+            <!--</div>-->
         </div>
     </div>
 </div>

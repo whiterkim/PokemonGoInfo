@@ -47,15 +47,23 @@
             </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-            <h1 class="page-header">@km km Eggs</h1>
+            <h1 class="page-header">Pokemon Eggs</h1>
 
             <!--<h2>@km km Eggs</h2>-->
+            Hatch distance:
+            <a href="@routes.HomeController.getEggs(2)">2km</a>
+            <a href="@routes.HomeController.getEggs(5)">5km</a>
+            <a href="@routes.HomeController.getEggs(10)">10km</a>
+            </br></br>
+
             <div class="table-responsive">
                 <table class="table table-striped">
                     <thead>
                     <tr>
                         <th>No.</th>
                         <th>Name</th>
+                        <th>Type</th>
+                        <th>Max CP</th>
                     </tr>
                     <tbody>
                     @if(allEggs != null) {
@@ -63,6 +71,12 @@
                             <tr>
                                 <th>@x.id</th>
                                 <th>@x.name</th>
+                                <th>@x.type1
+                                    @if( x.type2 != "None") {
+                                    @x.type2
+                                    }
+                                </th>
+                                <th>@x.max_cp</th>
                             </tr>
                         }
                     }

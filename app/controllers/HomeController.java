@@ -50,7 +50,7 @@ public class HomeController  extends Controller {
     }
 
     public Result moveList(int type) {
-        return ok(views.html.moves.render());
+        return ok(views.html.moves.render(Move.allMoves(type)));
     }
     public Result getEggs(int km) {
         return ok(views.html.eggs.render(km, Pokemon.allEggs(km)));

@@ -35,7 +35,7 @@ create table pokemon (
 create table move (
   id                        bigint not null,
   name                      varchar(255),
-  type                      varchar(255),
+  move_type                 varchar(255),
   power                     bigint,
   critical_hit_rate         bigint,
   cooldown                  bigint,

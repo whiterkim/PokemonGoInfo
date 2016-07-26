@@ -69,6 +69,7 @@
                             <th>No.</th>
                             <th>Name</th>
                             <th>Type</th>
+                            <th>Max CP</th>
                         </tr>
                         <tbody>
                         @for(x <- list) {
@@ -80,6 +81,7 @@
                                         @x.type2
                                     }
                                 </th>
+                                <th>@x.max_cp</th>
                             </tr>
                         }
                         </tbody>

@@ -12,9 +12,7 @@ import javax.inject.Inject;
 import javax.persistence.PersistenceException;
 import java.util.List;
 
-/**
- * Manage a database of computers
- */
+
 public class HomeController  extends Controller {
 
     private FormFactory formFactory;
@@ -23,10 +21,7 @@ public class HomeController  extends Controller {
     public HomeController(FormFactory formFactory) {
         this.formFactory = formFactory;
     }
-    
-    /**
-     * Handle default path requests, redirect to computers list
-     */
+
     public Result index()
     {
         //return GO_HOME;

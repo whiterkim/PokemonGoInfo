@@ -8,6 +8,7 @@ lazy val root = (project in file(".")).enablePlugins(PlayJava, PlayEbean).settin
   libraryDependencies ++= Seq(
     jdbc,
     // https://adrianhurt.github.io/play-bootstrap/
-    "com.adrianhurt" %% "play-bootstrap" % "1.0-P25-B3"
+    "com.adrianhurt" %% "play-bootstrap" % "1.0-P25-B3",
+    "mysql" % "mysql-connector-java" % "5.1.18"
   )
 }

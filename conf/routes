@@ -11,6 +11,7 @@ GET     /pokemon                    controllers.HomeController.pokemonList(type:
 GET     /candy                      controllers.HomeController.evolveCandy(num:Int)
 GET     /moves                      controllers.HomeController.moveList(type:Int)
 GET     /eggs                       controllers.HomeController.getEggs(km:Int)
+GET     /comment                    controllers.HomeController.comment()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

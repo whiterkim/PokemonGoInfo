@@ -45,6 +45,9 @@
                 <li><a href="@routes.HomeController.getEggs(5)">5km Eggs</a></li>
                 <li><a href="@routes.HomeController.getEggs(10)">10km Eggs</a></li>
             </ul>
+            <ul class="nav nav-sidebar">
+                <li><a href="@routes.HomeController.comment()">Comment</a></li>
+            </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
             <h1 class="page-header">Move List</h1>
@@ -53,7 +56,7 @@
             <a href="@routes.HomeController.moveList(0)">All moves</a>
             <a href="@routes.HomeController.moveList(1)">Fast moves</a>
             <a href="@routes.HomeController.moveList(2)">Special moves</a>
-            </br></br>
+            <br><br>
 
             <!--<h2>Pokemon List</h2>-->
             <div class="table-responsive">
@@ -74,6 +77,7 @@
                         <th>Energy Gain</th>
                         <th>Energy Cost</th>
                     </tr>
+                    </thead>
                     <tbody>
                     @for(x <- list) {
                     <tr>

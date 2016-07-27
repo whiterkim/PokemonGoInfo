@@ -10,14 +10,15 @@ create table article (
 );
 
 create table egg (
-  id                            bigint auto_increment not null,
+  id                            bigint not null,
   name                          varchar(255),
   distance                      bigint,
   constraint pk_egg primary key (id)
 );
+create sequence egg_seq;
 
 create table move (
-  id                            integer auto_increment not null,
+  id                            integer not null,
   name                          varchar(255),
   move_type                     varchar(255),
   power                         integer,
@@ -26,9 +27,10 @@ create table move (
   energy_inc                    integer,
   constraint pk_move primary key (id)
 );
+create sequence move_seq;
 
 create table pokemon (
-  id                            integer auto_increment not null,
+  id                            integer not null,
   name                          varchar(255),
   type1                         varchar(255),
   type2                         varchar(255),
@@ -44,6 +46,7 @@ create table pokemon (
   distance                      integer,
   constraint pk_pokemon primary key (id)
 );
+create sequence pokemon_seq;
 
 
 # --- !Downs
@@ -51,8 +54,11 @@ create table pokemon (
 drop table if exists article;
 
 drop table if exists egg;
+drop sequence if exists egg_seq;
 
 drop table if exists move;
+drop sequence if exists move_seq;
 
 drop table if exists pokemon;
+drop sequence if exists pokemon_seq;
 

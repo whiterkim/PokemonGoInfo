@@ -33,7 +33,11 @@ public class HomeController  extends Controller {
         Article article = articleForm.get();
         article.save();
         //return ok(views.html.add.render(article));
-        return redirect(routes.HomeController.index());
+        return redirect(routes.HomeController.comment());
+    }
+
+    public Result comment() {
+        return ok(views.html.comment.render(Article.allArticles()));
     }
 
     public Result pokemonList(String type) {
